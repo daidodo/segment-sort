@@ -59,7 +59,7 @@ export default class Segment {
 }
 
 // The following global variables are used to avoid duplicated small objects,
-// though they break 'no-use-before-define' and 'camelcase' rules from eslint.
+// though they break 'no-use-before-define' and 'camelcase' rules from ESLint.
 
 const G = {
   a: 'a'.charCodeAt(0),

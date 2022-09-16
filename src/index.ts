@@ -1,9 +1,24 @@
 import Segment, { Params } from './Segment';
-import { CompareRule } from './types';
+import {
+  CompareRule,
+  SegSymbol,
+} from './types';
 
-type Comparator = (a: string | undefined, b: string | undefined) => number;
+export { CompareRule, SegSymbol };
+
+/**
+ * Type of a function to compare two strings.
+ * @returns 0 if `a === b`; or negative if `a < b`; or positive if `a > b`
+ */
+export type Comparator = (a: string | undefined, b: string | undefined) => number;
+
 type InnerComparator = (a: string | undefined, b: string | undefined, c: boolean) => number;
 
+/**
+ * Generate a string comparison function based on the given rule.
+ * @param rule - Comparison rule
+ * @returns A string comparison function; or `undefined` if rule is invalid
+ */
 export default function segmentSorter(rule: CompareRule) {
   const p = { map: new Map<number, Segment>() };
   rule.forEach((s, i) => new Segment(s, i, p));

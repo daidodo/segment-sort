@@ -12,7 +12,5 @@ export type SegSymbol = 'az' | 'AZ' | 'aA' | 'Aa' | '_';
 
 /**
  * String comparison rule.
- *
- * If it's _none_, then there is no sorting at all.
  */
 export type CompareRule = SegSymbol[];
