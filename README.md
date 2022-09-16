@@ -63,7 +63,7 @@ Type of a function to compare two strings.
 
 #### Defined in
 
-[index.ts:13](https://github.com/daidodo/segment-sort/blob/505fd62/src/index.ts#L13)
+[index.ts:13](https://github.com/daidodo/segment-sort/blob/3c7ef1b/src/index.ts#L13)
 
 ---
 
@@ -75,25 +75,25 @@ String comparison rule.
 
 #### Defined in
 
-[types.ts:16](https://github.com/daidodo/segment-sort/blob/505fd62/src/types.ts#L16)
+[types.ts:16](https://github.com/daidodo/segment-sort/blob/3c7ef1b/src/types.ts#L16)
 
 ---
 
 ### SegSymbol
 
-Ƭ **SegSymbol**: `"az"` \| `"AZ"` \| `"aA"` \| `"Aa"` \| `"_"`
+Ƭ **SegSymbol**: `"az"` \| `"AZ"` \| `"aA"` \| `"aZ"` \| `"Aa"` \| `"Az"` \| `"_"`
 
 Symbols for char segments:
 
 - _az_ - Lower case letters, i.e. [a-z].
 - _AZ_ - Upper case letters, i.e. [A-Z].
-- _aA_ - Both case letters and lower case first, i.e. [a-zA-Z] and `'a' < 'A' < 'b' < 'B' < ...`
-- _Aa_ - Both case letters and upper case first, i.e. [a-zA-Z] and `'A' < 'a' < 'B' < 'b' < ...`
-- \_ - Chars with ASCII from 91 to 96, i.e. `[`, `\`, `]`, `^`, `_` , `` ` ``(backtick).
+- _aA_ or _aZ_ - Both case letters and lower case first, i.e. [a-zA-Z] and `'a' < 'A' < 'b' < 'B' < ...`
+- _Aa_ or _Az_ - Both case letters and upper case first, i.e. [a-zA-Z] and `'A' < 'a' < 'B' < 'b' < ...`
+- _ - Chars with ASCII from 91 to 96, i.e. `[`, `\`, `]`, `^`, `_` , ```  ` ```(backtick).
 
 #### Defined in
 
-[types.ts:11](https://github.com/daidodo/segment-sort/blob/505fd62/src/types.ts#L11)
+[types.ts:11](https://github.com/daidodo/segment-sort/blob/3c7ef1b/src/types.ts#L11)
 
 ## Functions
 
@@ -117,7 +117,7 @@ A string comparison function; or `undefined` if rule is invalid
 
 #### Defined in
 
-[index.ts:22](https://github.com/daidodo/segment-sort/blob/505fd62/src/index.ts#L22)
+[index.ts:22](https://github.com/daidodo/segment-sort/blob/3c7ef1b/src/index.ts#L22)
 
 # Algorithm
 
@@ -131,8 +131,8 @@ A segment is a collection of characters with a sorting rule. Currently, there ar
 
 - `"az"`: Lower-case letters (`[a-z]`) sorted alphabetically.
 - `"AZ"`: Upper-case letters(`[A-Z]`) sorted alphabetically.
-- `"aA"`: Both case letters (`[a-zA-Z]`) sorted case-insensitively and lower case first in case of a tie (`'a' < 'A' < 'b' < 'B' < ...`).
-- `"Aa"`: Both case letters (`[a-zA-Z]`) sorted case-insensitively and upper case first in case of a tie (`'A' < 'a' < 'B' < 'b' < ...`).
+- `"aA"` or `"aZ"`: Both case letters (`[a-zA-Z]`) sorted case-insensitively and lower case first in case of a tie (`'a' < 'A' < 'b' < 'B' < ...`).
+- `"Aa"` or `"Az"`: Both case letters (`[a-zA-Z]`) sorted case-insensitively and upper case first in case of a tie (`'A' < 'a' < 'B' < 'b' < ...`).
 - `"_"` - Chars of ASCII from 91 to 96, i.e. `[`, `\`, `]`, `^`, `_`, `` ` ``(backtick), sorted alphabetically.
 
 ### Case Sensitivity
@@ -140,18 +140,18 @@ A segment is a collection of characters with a sorting rule. Currently, there ar
 The segments used in `CompareRule` implicitly decide whether to compare strings case-sensitively or -insensitively:
 
 - `"az"` or `"AZ"`: Compare strings _case-sensitively_;
-- `"aA"` or `"Aa"`: Compare strings _case-insensitively_;
+- `"aA"`, `"Aa"`, `"aZ"` or `"Az"`: Compare strings _case-insensitively_;
 
 ## Some Examples
 
-### `["_", "aA"]`
+### `["_", "aA"]` or `["_", "aZ"]`
 
 - Strings are compared case-insensitively, and lower case goes first in case of a tie.
 - `[`, `\`, `]`, `^`, `_`, `` ` ``(backtick) are in front of letters (`[a-zA-Z]`).
 
 A sorted example is `['_', 'a', 'A', 'b', 'B']`.
 
-### `["Aa", "_"]`
+### `["Aa", "_"]` or `["Az", "_"]`
 
 - Strings are compared case-insensitively, and upper case goes first in case of a tie.
 - `[`, `\`, `]`, `^`, `_`, `` ` ``(backtick) are after letters (`[a-zA-Z]`).
