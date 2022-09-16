@@ -1,0 +1,21 @@
+{
+  "extends": "@tsconfig/recommended/tsconfig.json",
+  "compilerOptions": {
+    "declaration": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUnusedLocals": true,
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src/"],
+  "exclude": ["src/test", "src/**/*.test.ts"],
+  "typedocOptions": {
+    "entryPoints": ["src/index.ts"],
+    "hideInPageTOC": true,
+    "hideBreadcrumbs": true,
+    "readme": "none",
+    "name": "APIs Documentation",
+    "excludeInternal": true
+  }
+}
