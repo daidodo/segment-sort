@@ -40,10 +40,12 @@ export default class Segment {
         this.setP(p, '['.charCodeAt(0), '`'.charCodeAt(0), 0b100);
         return COMPARE;
       case 'Aa':
+      case 'Az':
         this.setP(p, A, Z, 0b11, false);
         this.setP(p, a, z);
         return COMPARE_Aa;
       case 'aA':
+      case 'aZ':
         this.setP(p, A, Z, 0b11, false);
         this.setP(p, a, z);
         return COMPARE_aA;

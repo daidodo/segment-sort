@@ -1,4 +1,7 @@
-import segmentSorter, { Comparator } from './';
+import segmentSorter, {
+  Comparator,
+  SegSymbol,
+} from './';
 
 const ORIGIN = [
   'D',
@@ -66,17 +69,39 @@ describe('segmentSorter', () => {
       });
     });
     describe('0-12', () => {
-      const comp = segmentSorter(['_', 'aA']);
-      it('should sort strings', () => {
-        expect(comp).toBeDefined();
-        expect(sort(ORIGIN, comp)).toMatchSnapshot();
+      describe('aA', () => {
+        const S: SegSymbol = 'aA';
+        const comp = segmentSorter(['_', S]);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+      });
+      describe('aZ', () => {
+        const S: SegSymbol = 'aZ';
+        const comp = segmentSorter(['_', S]);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
       });
     });
     describe('0-21', () => {
-      const comp = segmentSorter(['_', 'Aa']);
-      it('should sort strings', () => {
-        expect(comp).toBeDefined();
-        expect(sort(ORIGIN, comp)).toMatchSnapshot();
+      describe('Aa', () => {
+        const S: SegSymbol = 'Aa';
+        const comp = segmentSorter(['_', S]);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+      });
+      describe('Az', () => {
+        const S: SegSymbol = 'Az';
+        const comp = segmentSorter(['_', S]);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
       });
     });
   });
@@ -110,6 +135,70 @@ describe('segmentSorter', () => {
         it('should sort strings', () => {
           expect(comp).toBeDefined();
           expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+      });
+    });
+    describe('1-12', () => {
+      describe('aA', () => {
+        const S: SegSymbol = 'aA';
+        const comp = segmentSorter(['az', S]);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('1-12-0', () => {
+          const comp = segmentSorter(['az', S, '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
+        });
+      });
+      describe('aZ', () => {
+        const S: SegSymbol = 'aZ';
+        const comp = segmentSorter(['az', S]);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('1-12-0', () => {
+          const comp = segmentSorter(['az', S, '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
+        });
+      });
+    });
+    describe('1-21', () => {
+      describe('Aa', () => {
+        const S: SegSymbol = 'Aa';
+        const comp = segmentSorter(['az', S]);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('1-21-0', () => {
+          const comp = segmentSorter(['az', S, '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
+        });
+      });
+      describe('Az', () => {
+        const S: SegSymbol = 'Az';
+        const comp = segmentSorter(['az', S]);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('1-21-0', () => {
+          const comp = segmentSorter(['az', S, '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
         });
       });
     });
@@ -147,32 +236,244 @@ describe('segmentSorter', () => {
         });
       });
     });
+    describe('2-12', () => {
+      describe('aA', () => {
+        const S: SegSymbol = 'aA';
+        const comp = segmentSorter(['AZ', S]);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('2-12-0', () => {
+          const comp = segmentSorter(['AZ', S, '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
+        });
+      });
+      describe('aZ', () => {
+        const S: SegSymbol = 'aZ';
+        const comp = segmentSorter(['AZ', S]);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('2-12-0', () => {
+          const comp = segmentSorter(['AZ', S, '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
+        });
+      });
+    });
+    describe('2-21', () => {
+      describe('Aa', () => {
+        const S: SegSymbol = 'Aa';
+        const comp = segmentSorter(['AZ', S]);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('2-21-0', () => {
+          const comp = segmentSorter(['AZ', S, '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
+        });
+      });
+      describe('Az', () => {
+        const S: SegSymbol = 'Az';
+        const comp = segmentSorter(['AZ', S]);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('2-21-0', () => {
+          const comp = segmentSorter(['AZ', S, '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
+        });
+      });
+    });
   });
   describe('12', () => {
-    const comp = segmentSorter(['aA']);
-    it('should sort strings', () => {
-      expect(comp).toBeDefined();
-      expect(sort(ORIGIN, comp)).toMatchSnapshot();
-    });
-    describe('12-0', () => {
-      const comp = segmentSorter(['aA', '_']);
+    describe('aA', () => {
+      const S: SegSymbol = 'aA';
+      const comp = segmentSorter([S]);
       it('should sort strings', () => {
         expect(comp).toBeDefined();
         expect(sort(ORIGIN, comp)).toMatchSnapshot();
       });
+      describe('12-0', () => {
+        const comp = segmentSorter([S, '_']);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+      });
+      describe('12-1', () => {
+        const comp = segmentSorter([S, 'az']);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('12-1-0', () => {
+          const comp = segmentSorter([S, 'az', '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
+        });
+      });
+      describe('12-2', () => {
+        const comp = segmentSorter([S, 'AZ']);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('12-2-0', () => {
+          const comp = segmentSorter([S, 'AZ', '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
+        });
+      });
     });
-  });
-  describe('21', () => {
-    const comp = segmentSorter(['Aa']);
-    it('should sort strings', () => {
-      expect(comp).toBeDefined();
-      expect(sort(ORIGIN, comp)).toMatchSnapshot();
-    });
-    describe('21-0', () => {
-      const comp = segmentSorter(['Aa', '_']);
+    describe('aZ', () => {
+      const S: SegSymbol = 'aZ';
+      const comp = segmentSorter([S]);
       it('should sort strings', () => {
         expect(comp).toBeDefined();
         expect(sort(ORIGIN, comp)).toMatchSnapshot();
+      });
+      describe('12-0', () => {
+        const comp = segmentSorter([S, '_']);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+      });
+      describe('12-1', () => {
+        const comp = segmentSorter([S, 'az']);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('12-1-0', () => {
+          const comp = segmentSorter([S, 'az', '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
+        });
+      });
+      describe('12-2', () => {
+        const comp = segmentSorter([S, 'AZ']);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('12-2-0', () => {
+          const comp = segmentSorter([S, 'AZ', '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
+        });
+      });
+    });
+  });
+  describe('21', () => {
+    describe('Aa', () => {
+      const S: SegSymbol = 'Aa';
+      const comp = segmentSorter([S]);
+      it('should sort strings', () => {
+        expect(comp).toBeDefined();
+        expect(sort(ORIGIN, comp)).toMatchSnapshot();
+      });
+      describe('21-0', () => {
+        const comp = segmentSorter([S, '_']);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+      });
+      describe('21-1', () => {
+        const comp = segmentSorter([S, 'az']);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('21-1-0', () => {
+          const comp = segmentSorter([S, 'az', '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
+        });
+      });
+      describe('21-2', () => {
+        const comp = segmentSorter([S, 'AZ']);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('21-2-0', () => {
+          const comp = segmentSorter([S, 'AZ', '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
+        });
+      });
+    });
+    describe('Az', () => {
+      const S: SegSymbol = 'Az';
+      const comp = segmentSorter([S]);
+      it('should sort strings', () => {
+        expect(comp).toBeDefined();
+        expect(sort(ORIGIN, comp)).toMatchSnapshot();
+      });
+      describe('21-0', () => {
+        const comp = segmentSorter([S, '_']);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+      });
+      describe('21-1', () => {
+        const comp = segmentSorter([S, 'az']);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('21-1-0', () => {
+          const comp = segmentSorter([S, 'az', '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
+        });
+      });
+      describe('21-2', () => {
+        const comp = segmentSorter([S, 'AZ']);
+        it('should sort strings', () => {
+          expect(comp).toBeDefined();
+          expect(sort(ORIGIN, comp)).toMatchSnapshot();
+        });
+        describe('21-2-0', () => {
+          const comp = segmentSorter([S, 'AZ', '_']);
+          it('should sort strings', () => {
+            expect(comp).toBeDefined();
+            expect(sort(ORIGIN, comp)).toMatchSnapshot();
+          });
+        });
       });
     });
   });

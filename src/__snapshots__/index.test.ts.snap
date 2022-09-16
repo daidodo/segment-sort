@@ -116,7 +116,7 @@ exports[`segmentSorter 0 0-2 should sort strings 1`] = `
 ]
 `;
 
-exports[`segmentSorter 0 0-12 should sort strings 1`] = `
+exports[`segmentSorter 0 0-12 aA should sort strings 1`] = `
 [
   ".",
   "..",
@@ -145,7 +145,65 @@ exports[`segmentSorter 0 0-12 should sort strings 1`] = `
 ]
 `;
 
-exports[`segmentSorter 0 0-21 should sort strings 1`] = `
+exports[`segmentSorter 0 0-12 aZ should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "_",
+  "a",
+  "A",
+  "aa",
+  "aA",
+  "Aa",
+  "AA",
+  "ab",
+  "aB",
+  "Ab",
+  "AB",
+  "b",
+  "B",
+  "BB",
+  "BBB",
+  "c",
+  "C",
+  "d",
+  "D",
+  "dd",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 0 0-21 Aa should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "_",
+  "A",
+  "a",
+  "AA",
+  "Aa",
+  "aA",
+  "aa",
+  "AB",
+  "Ab",
+  "aB",
+  "ab",
+  "B",
+  "b",
+  "BB",
+  "BBB",
+  "C",
+  "c",
+  "D",
+  "d",
+  "dd",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 0 0-21 Az should sort strings 1`] = `
 [
   ".",
   "..",
@@ -290,6 +348,238 @@ exports[`segmentSorter 1 1-2 should sort strings 1`] = `
 ]
 `;
 
+exports[`segmentSorter 1 1-12 aA 1-12-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "aa",
+  "ab",
+  "aA",
+  "aB",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "A",
+  "Aa",
+  "Ab",
+  "AA",
+  "AB",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 1 1-12 aA should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "aa",
+  "ab",
+  "aA",
+  "aB",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "A",
+  "Aa",
+  "Ab",
+  "AA",
+  "AB",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 1 1-12 aZ 1-12-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "aa",
+  "ab",
+  "aA",
+  "aB",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "A",
+  "Aa",
+  "Ab",
+  "AA",
+  "AB",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 1 1-12 aZ should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "aa",
+  "ab",
+  "aA",
+  "aB",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "A",
+  "Aa",
+  "Ab",
+  "AA",
+  "AB",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 1 1-21 Aa 1-21-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "aa",
+  "ab",
+  "aA",
+  "aB",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "A",
+  "Aa",
+  "Ab",
+  "AA",
+  "AB",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 1 1-21 Aa should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "aa",
+  "ab",
+  "aA",
+  "aB",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "A",
+  "Aa",
+  "Ab",
+  "AA",
+  "AB",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 1 1-21 Az 1-21-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "aa",
+  "ab",
+  "aA",
+  "aB",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "A",
+  "Aa",
+  "Ab",
+  "AA",
+  "AB",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 1 1-21 Az should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "aa",
+  "ab",
+  "aA",
+  "aB",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "A",
+  "Aa",
+  "Ab",
+  "AA",
+  "AB",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "_",
+  "~",
+  "中",
+]
+`;
+
 exports[`segmentSorter 2 2-0 2-0-1 should sort strings 1`] = `
 [
   ".",
@@ -406,7 +696,239 @@ exports[`segmentSorter 2 2-1 should sort strings 1`] = `
 ]
 `;
 
-exports[`segmentSorter 12 12-0 should sort strings 1`] = `
+exports[`segmentSorter 2 2-12 aA 2-12-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "AA",
+  "AB",
+  "Aa",
+  "Ab",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "a",
+  "aA",
+  "aB",
+  "aa",
+  "ab",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 2 2-12 aA should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "AA",
+  "AB",
+  "Aa",
+  "Ab",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "a",
+  "aA",
+  "aB",
+  "aa",
+  "ab",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 2 2-12 aZ 2-12-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "AA",
+  "AB",
+  "Aa",
+  "Ab",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "a",
+  "aA",
+  "aB",
+  "aa",
+  "ab",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 2 2-12 aZ should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "AA",
+  "AB",
+  "Aa",
+  "Ab",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "a",
+  "aA",
+  "aB",
+  "aa",
+  "ab",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 2 2-21 Aa 2-21-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "AA",
+  "AB",
+  "Aa",
+  "Ab",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "a",
+  "aA",
+  "aB",
+  "aa",
+  "ab",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 2 2-21 Aa should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "AA",
+  "AB",
+  "Aa",
+  "Ab",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "a",
+  "aA",
+  "aB",
+  "aa",
+  "ab",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 2 2-21 Az 2-21-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "AA",
+  "AB",
+  "Aa",
+  "Ab",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "a",
+  "aA",
+  "aB",
+  "aa",
+  "ab",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 2 2-21 Az should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "AA",
+  "AB",
+  "Aa",
+  "Ab",
+  "B",
+  "BB",
+  "BBB",
+  "C",
+  "D",
+  "a",
+  "aA",
+  "aB",
+  "aa",
+  "ab",
+  "b",
+  "c",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 12 aA 12-0 should sort strings 1`] = `
 [
   ".",
   "..",
@@ -435,7 +957,7 @@ exports[`segmentSorter 12 12-0 should sort strings 1`] = `
 ]
 `;
 
-exports[`segmentSorter 12 should sort strings 1`] = `
+exports[`segmentSorter 12 aA 12-1 12-1-0 should sort strings 1`] = `
 [
   ".",
   "..",
@@ -464,7 +986,297 @@ exports[`segmentSorter 12 should sort strings 1`] = `
 ]
 `;
 
-exports[`segmentSorter 21 21-0 should sort strings 1`] = `
+exports[`segmentSorter 12 aA 12-1 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "A",
+  "aa",
+  "aA",
+  "Aa",
+  "AA",
+  "ab",
+  "aB",
+  "Ab",
+  "AB",
+  "b",
+  "B",
+  "BB",
+  "BBB",
+  "c",
+  "C",
+  "d",
+  "D",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 12 aA 12-2 12-2-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "A",
+  "aa",
+  "aA",
+  "Aa",
+  "AA",
+  "ab",
+  "aB",
+  "Ab",
+  "AB",
+  "b",
+  "B",
+  "BB",
+  "BBB",
+  "c",
+  "C",
+  "d",
+  "D",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 12 aA 12-2 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "A",
+  "aa",
+  "aA",
+  "Aa",
+  "AA",
+  "ab",
+  "aB",
+  "Ab",
+  "AB",
+  "b",
+  "B",
+  "BB",
+  "BBB",
+  "c",
+  "C",
+  "d",
+  "D",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 12 aA should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "A",
+  "aa",
+  "aA",
+  "Aa",
+  "AA",
+  "ab",
+  "aB",
+  "Ab",
+  "AB",
+  "b",
+  "B",
+  "BB",
+  "BBB",
+  "c",
+  "C",
+  "d",
+  "D",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 12 aZ 12-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "A",
+  "aa",
+  "aA",
+  "Aa",
+  "AA",
+  "ab",
+  "aB",
+  "Ab",
+  "AB",
+  "b",
+  "B",
+  "BB",
+  "BBB",
+  "c",
+  "C",
+  "d",
+  "D",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 12 aZ 12-1 12-1-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "A",
+  "aa",
+  "aA",
+  "Aa",
+  "AA",
+  "ab",
+  "aB",
+  "Ab",
+  "AB",
+  "b",
+  "B",
+  "BB",
+  "BBB",
+  "c",
+  "C",
+  "d",
+  "D",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 12 aZ 12-1 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "A",
+  "aa",
+  "aA",
+  "Aa",
+  "AA",
+  "ab",
+  "aB",
+  "Ab",
+  "AB",
+  "b",
+  "B",
+  "BB",
+  "BBB",
+  "c",
+  "C",
+  "d",
+  "D",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 12 aZ 12-2 12-2-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "A",
+  "aa",
+  "aA",
+  "Aa",
+  "AA",
+  "ab",
+  "aB",
+  "Ab",
+  "AB",
+  "b",
+  "B",
+  "BB",
+  "BBB",
+  "c",
+  "C",
+  "d",
+  "D",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 12 aZ 12-2 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "A",
+  "aa",
+  "aA",
+  "Aa",
+  "AA",
+  "ab",
+  "aB",
+  "Ab",
+  "AB",
+  "b",
+  "B",
+  "BB",
+  "BBB",
+  "c",
+  "C",
+  "d",
+  "D",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 12 aZ should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "a",
+  "A",
+  "aa",
+  "aA",
+  "Aa",
+  "AA",
+  "ab",
+  "aB",
+  "Ab",
+  "AB",
+  "b",
+  "B",
+  "BB",
+  "BBB",
+  "c",
+  "C",
+  "d",
+  "D",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 21 Aa 21-0 should sort strings 1`] = `
 [
   ".",
   "..",
@@ -493,7 +1305,297 @@ exports[`segmentSorter 21 21-0 should sort strings 1`] = `
 ]
 `;
 
-exports[`segmentSorter 21 should sort strings 1`] = `
+exports[`segmentSorter 21 Aa 21-1 21-1-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "a",
+  "AA",
+  "Aa",
+  "aA",
+  "aa",
+  "AB",
+  "Ab",
+  "aB",
+  "ab",
+  "B",
+  "b",
+  "BB",
+  "BBB",
+  "C",
+  "c",
+  "D",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 21 Aa 21-1 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "a",
+  "AA",
+  "Aa",
+  "aA",
+  "aa",
+  "AB",
+  "Ab",
+  "aB",
+  "ab",
+  "B",
+  "b",
+  "BB",
+  "BBB",
+  "C",
+  "c",
+  "D",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 21 Aa 21-2 21-2-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "a",
+  "AA",
+  "Aa",
+  "aA",
+  "aa",
+  "AB",
+  "Ab",
+  "aB",
+  "ab",
+  "B",
+  "b",
+  "BB",
+  "BBB",
+  "C",
+  "c",
+  "D",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 21 Aa 21-2 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "a",
+  "AA",
+  "Aa",
+  "aA",
+  "aa",
+  "AB",
+  "Ab",
+  "aB",
+  "ab",
+  "B",
+  "b",
+  "BB",
+  "BBB",
+  "C",
+  "c",
+  "D",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 21 Aa should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "a",
+  "AA",
+  "Aa",
+  "aA",
+  "aa",
+  "AB",
+  "Ab",
+  "aB",
+  "ab",
+  "B",
+  "b",
+  "BB",
+  "BBB",
+  "C",
+  "c",
+  "D",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 21 Az 21-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "a",
+  "AA",
+  "Aa",
+  "aA",
+  "aa",
+  "AB",
+  "Ab",
+  "aB",
+  "ab",
+  "B",
+  "b",
+  "BB",
+  "BBB",
+  "C",
+  "c",
+  "D",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 21 Az 21-1 21-1-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "a",
+  "AA",
+  "Aa",
+  "aA",
+  "aa",
+  "AB",
+  "Ab",
+  "aB",
+  "ab",
+  "B",
+  "b",
+  "BB",
+  "BBB",
+  "C",
+  "c",
+  "D",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 21 Az 21-1 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "a",
+  "AA",
+  "Aa",
+  "aA",
+  "aa",
+  "AB",
+  "Ab",
+  "aB",
+  "ab",
+  "B",
+  "b",
+  "BB",
+  "BBB",
+  "C",
+  "c",
+  "D",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 21 Az 21-2 21-2-0 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "a",
+  "AA",
+  "Aa",
+  "aA",
+  "aa",
+  "AB",
+  "Ab",
+  "aB",
+  "ab",
+  "B",
+  "b",
+  "BB",
+  "BBB",
+  "C",
+  "c",
+  "D",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 21 Az 21-2 should sort strings 1`] = `
+[
+  ".",
+  "..",
+  "A",
+  "a",
+  "AA",
+  "Aa",
+  "aA",
+  "aa",
+  "AB",
+  "Ab",
+  "aB",
+  "ab",
+  "B",
+  "b",
+  "BB",
+  "BBB",
+  "C",
+  "c",
+  "D",
+  "d",
+  "dd",
+  "_",
+  "~",
+  "中",
+]
+`;
+
+exports[`segmentSorter 21 Az should sort strings 1`] = `
 [
   ".",
   "..",
