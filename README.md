@@ -34,8 +34,6 @@ const comparator2 = segmentSorter(['aA', '_']);
 
 For more info, please check the APIs.
 
-# APIs
-
 # APIs Documentation
 
 ## Type Aliases
@@ -120,6 +118,86 @@ A string comparison function; or `undefined` if rule is invalid
 #### Defined in
 
 [index.ts:22](https://github.com/daidodo/segment-sort/blob/505fd62/src/index.ts#L22)
+
+# Algorithm
+
+## Compare Rule
+
+A `CompareRule` is an array of **segment**s.
+
+### Segment
+
+A segment is a collection of characters with a sorting rule. Currently, there are 5 predefined segments:
+
+- `"az"`: Lower-case letters (`[a-z]`) sorted alphabetically.
+- `"AZ"`: Upper-case letters(`[A-Z]`) sorted alphabetically.
+- `"aA"`: Both case letters (`[a-zA-Z]`) sorted case-insensitively and lower case first in case of a tie (`'a' < 'A' < 'b' < 'B' < ...`).
+- `"Aa"`: Both case letters (`[a-zA-Z]`) sorted case-insensitively and upper case first in case of a tie (`'A' < 'a' < 'B' < 'b' < ...`).
+- `"_"` - Chars of ASCII from 91 to 96, i.e. `[`, `\`, `]`, `^`, `_`, `` ` ``(backtick), sorted alphabetically.
+
+### Case Sensitivity
+
+The segments used in `CompareRule` implicitly decide whether to compare strings case-sensitively or -insensitively:
+
+- `"az"` or `"AZ"`: Compare strings _case-sensitively_;
+- `"aA"` or `"Aa"`: Compare strings _case-insensitively_;
+
+## Some Examples
+
+### `["_", "aA"]`
+
+- Strings are compared case-insensitively, and lower case goes first in case of a tie.
+- `[`, `\`, `]`, `^`, `_`, `` ` ``(backtick) are in front of letters (`[a-zA-Z]`).
+
+A sorted example is `['_', 'a', 'A', 'b', 'B']`.
+
+### `["Aa", "_"]`
+
+- Strings are compared case-insensitively, and upper case goes first in case of a tie.
+- `[`, `\`, `]`, `^`, `_`, `` ` ``(backtick) are after letters (`[a-zA-Z]`).
+
+This is widely used, e.g. as the default option (`"case-insensitive"`) in [TSLint Rule: ordered-imports](https://palantir.github.io/tslint/rules/ordered-imports/). A sorted example is `['A', 'a', 'B', 'b', '_']`.
+
+### `["az", "_", "AZ"]`
+
+- Strings are compared case-sensitively, and lower-case letters (`[a-z]`) are in front of upper-case letters (`[A-Z]`).
+- `[`, `\`, `]`, `^`, `_`, `` ` ``(backtick) are behind lower-case letters and before upper-case letters.
+
+This corresponds to `"lowercase-first"` in [TSLint Rule: ordered-imports](https://palantir.github.io/tslint/rules/ordered-imports/). A sorted example is `['a', 'b', '_', 'A', 'B']`.
+
+### `["AZ", "_", "az"]`
+
+- Strings are compared case-sensitively, and upper-case letters (`[A-Z]`) are in front of lower-case letters (`[a-z]`).
+- `[`, `\`, `]`, `^`, `_`, `` ` ``(backtick) are behind upper-case letters and before lower-case letters.
+
+This corresponds to `"lowercase-last"` in [TSLint Rule: ordered-imports](https://palantir.github.io/tslint/rules/ordered-imports/).
+
+A sorted example is `['A', 'B', '_', 'a', 'b']`.
+
+## Incomplete Rules
+
+The algorithm in this package is smart enough to complete `CompareRule` by appending missing segments in the end.
+
+For example, `["az", "_"]` will be padded with `"AZ"`, and equals to `["az", "_", "AZ"]`.
+
+But it will give up if there is uncertainty. For example, `["az"]` can't be completed as the order between `"_"` and `"AZ"` is unknown, hence `undefined` is returned.
+
+Here are some incomplete but meaningful rules:
+
+- `["az", "_"]` => `["az", "_", "AZ"]`
+- `["AZ", "_"]` => `["AZ", "_", "az"]`
+- `["Aa"]` => `["Aa", "_"]`
+- `["aA"]` => `["aA", "_"]`
+
+## Overlapped Rules
+
+When segments overlap with each other, the one that appears first takes effect.
+
+For example, `["aA", "az"]` is equal to `["aA"]` because `"az"` is covered by previous `"aA"`.
+
+`["az", "aA"]` is equal to `["az", "AZ"]` because the lower-case part of `"aA"` is overlapped, but not the upper-case part.
+
+The algorithm tolerates overlapped rules for better usability but you are not recommended to use them in your projects.
 
 # License
 
