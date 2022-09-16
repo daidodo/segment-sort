@@ -91,7 +91,7 @@ Symbols for char segments:
 - _AZ_ - Upper case letters, i.e. [A-Z].
 - _aA_ - Both case letters and lower case first, i.e. [a-zA-Z] and `'a' < 'A' < 'b' < 'B' < ...`
 - _Aa_ - Both case letters and upper case first, i.e. [a-zA-Z] and `'A' < 'a' < 'B' < 'b' < ...`
-- \_ - Chars with ASCII from 91 to 96, i.e. `[`, `\`, `]`, `^`, `_` , `` ```(backtick).
+- \_ - Chars with ASCII from 91 to 96, i.e. `[`, `\`, `]`, `^`, `_` , `` ` ``(backtick).
 
 #### Defined in
 
