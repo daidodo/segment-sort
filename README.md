@@ -1,4 +1,4 @@
-# PROJECT_NAME
+# Segment Sort
 
 <!--
 First publish:
@@ -8,16 +8,16 @@ npm publish --access public
 ```
 -->
 
-[![npm](https://img.shields.io/npm/v/PROJECT_NAME.svg)](https://www.npmjs.com/package/PROJECT_NAME)
-![Downloads](https://img.shields.io/npm/dm/PROJECT_NAME.svg)
-[![Build Status](https://github.com/daidodo/TEMPLATE_TypeScript/actions/workflows/node.js.yml/badge.svg)](https://github.com/daidodo/TEMPLATE_TypeScript/actions)
+[![npm](https://img.shields.io/npm/v/segment-sort.svg)](https://www.npmjs.com/package/segment-sort)
+![Downloads](https://img.shields.io/npm/dm/segment-sort.svg)
+[![Build Status](https://github.com/daidodo/segment-sort/actions/workflows/node.js.yml/badge.svg)](https://github.com/daidodo/segment-sort/actions)
 
-Template for TypeScript projects.
+Create string sort algorithm from segment config.
 
 # Usage
 
 ```sh
-npm i PROJECT_NAME
+npm i segment-sort
 ```
 
 # APIs

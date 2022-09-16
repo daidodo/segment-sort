@@ -1,16 +1,18 @@
 {
-  "name": "PROJECT_NAME",
-  "description": "PROJECT DESCRIPTION.",
+  "name": "segment-sort",
+  "description": "Create string sort algorithm from segment config.",
   "bugs": {
-    "url": "https://github.com/daidodo/PROJECT_NAME/issues"
+    "url": "https://github.com/daidodo/segment-sort/issues"
   },
-  "homepage": "https://github.com/daidodo/PROJECT_NAME#readme",
+  "homepage": "https://github.com/daidodo/segment-sort#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/daidodo/PROJECT_NAME.git"
+    "url": "git+https://github.com/daidodo/segment-sort.git"
   },
   "keywords": [
-    "PROJECT KEYWORD"
+    "string",
+    "sort",
+    "segment"
   ],
   "version": "0.0.1",
   "main": "dist/index.js",
