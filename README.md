@@ -121,6 +121,8 @@ A string comparison function; or `undefined` if rule is invalid
 
 # Algorithm
 
+The key of segment-sort is to define a `CompareRule` so it creates a custom string sort algorithm for you.
+
 ## Compare Rule
 
 A `CompareRule` is an array of **segment**s.
