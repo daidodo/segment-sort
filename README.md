@@ -199,7 +199,7 @@ For example, `["aA", "az"]` is equal to `["aA"]` because `"az"` is covered by pr
 
 `["az", "aA"]` is equal to `["az", "AZ"]` because the lower-case part of `"aA"` is overlapped, but not the upper-case part.
 
-The algorithm tolerates overlapped rules for better usability but you are not recommended to use them in your projects.
+The algorithm tolerates overlapped rules for better usability but you should treat them as potential mistakes.
 
 # License
 
