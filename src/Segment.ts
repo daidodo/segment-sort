@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
-
 import { type SegSymbol } from './types';
 
 type Comparator = (a: number, b: number, c: boolean) => number;

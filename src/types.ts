@@ -1,5 +1,3 @@
-/* eslint-disable tsdoc/syntax */
-
 /**
  * Symbols for char segments:
  * - _az_ - Lower case letters, i.e. [a-z].
